@@ -1,5 +1,5 @@
 # ====================================================================================================
-# ♾️ LOYIHA: KGO SYSTEMS & GEMINGPT GLOBAL NETWORKS (10k IQ FLOATING BUTTON EDITION)
+# ♾️ LOYIHA: KGO SYSTEMS & GEMINGPT GLOBAL NETWORKS (ULTIMATE STREAMING KNOWLEDGE EDITION)
 # 👤 ASOSCHI: KAMRON XUDAYNAZAROV & KGO GROUP GLOBAL SYSTEMS
 # 🛠️ TEXNIK TA'MINOT: GROQ LLAMA-3.3-70B ENGINE & STREAMLIT MATRIX INTERFACE
 # ====================================================================================================
@@ -85,7 +85,6 @@ st.markdown("""
         background: rgba(5, 11, 20, 0.9);
     }
 
-    /* Maxsus neon stiker uslublari */
     .cyber-neon-sticker {
         font-size: 55px;
         margin-bottom: 15px;
@@ -118,11 +117,32 @@ st.markdown("""
         background: rgba(0, 0, 0, 0.4); border-radius: 100px; border: 1px solid rgba(255, 255, 255, 0.1);
     }
 
-    /* 🔥 [YANGI ELEMENT] SAYT PASTIDA DOIMI TURADIGAN DUMALOQ KIBER-TUGMA CSS'I */
-    .kgo-floating-btn {
+    /* 🔥 TUGMANING TEPASIDAGI TEXT VA FLOATING BUTTON JALASI */
+    .kgo-btn-container {
         position: fixed;
-        bottom: 30px;
+        bottom: 20px;
         right: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        z-index: 9999;
+    }
+
+    .kgo-btn-text-label {
+        color: #00f2fe;
+        font-size: 11px;
+        font-weight: 900;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        text-shadow: 0 0 10px #00f2fe;
+        margin-bottom: 5px;
+        background: rgba(5, 11, 20, 0.8);
+        padding: 3px 8px;
+        border-radius: 5px;
+        border: 1px solid rgba(0, 242, 254, 0.3);
+    }
+
+    .kgo-floating-btn {
         width: 70px;
         height: 70px;
         background: linear-gradient(135deg, #00f2fe, #ff0055);
@@ -134,13 +154,11 @@ st.markdown("""
         color: white;
         box-shadow: 0 0 25px rgba(0, 242, 254, 0.6);
         cursor: pointer;
-        z-index: 9999;
         transition: all 0.4s ease-in-out;
         border: 2px solid rgba(255, 255, 255, 0.2);
         text-decoration: none;
     }
     
-    /* Sichqoncha ustiga kelganda aylanadi va porlaydi */
     .kgo-floating-btn:hover {
         transform: scale(1.15) rotate(360deg);
         box-shadow: 0 0 45px rgba(255, 0, 85, 0.9);
@@ -308,24 +326,118 @@ if __name__ == '__main__':
         </div>
         """, unsafe_allow_html=True)
 
-    # --- 5-SAHIFA: KOD YARATISH MODULI ---
+    # --- 5-SAHIFA: KOD YARATISH MODULI (🔥 JONLI STRIMS VA ULKAN AXBOROT) ---
     elif choice == "💻 Professional Kod Laboratoriyasi":
         st.subheader("💻 Intellektual Kod Generatsiyasi va UI Injenering")
-        tab1, tab2, tab3 = st.tabs(["Frontend Standartlari", "Backend Mantiqlari", "Kiber-Xavfsizlik"])
+        
+        # Jonli yozilayotgan effekt mantiqi (Assta-sekin matn oqimi)
+        placeholder = st.empty()
+        full_intro = "KGO Matrix tizimiga xush kelibsiz. Tizim hozirda global arxitektura ma'lumotlarini yuklamoqda... Assta-sekin... Ulanish muvaffaqiyatli! Pastdagi tablar orqali ulkan ma'lumotlar bazasi va tayyor avtomatik kodlarni ko'rishingiz mumkin."
+        
+        streamed_text = ""
+        for char in full_intro:
+            streamed_text += char
+            placeholder.markdown(f"**⚡ Jonli Tizim Oqimi:** `{streamed_text}`")
+            time.sleep(0.01) # Harflarning assta-sekin chiqish tezligi
+
+        tab1, tab2, tab3 = st.tabs(["💻 Frontend Standartlari", "⚙️ Backend Mantiqlari", "🛡️ Kiber-Xavfsizlik"])
+        
         with tab1:
             st.markdown("""
             <div class="cyber-3d-card">
                 <div class="cyber-neon-sticker">🎨</div>
-                <div class="card-title">Interaktiv UI/UX va JavaScript</div>
-                <div class="card-desc">Foydalanuvchilar elementlar ustiga sichqonchani olib kelganda qimirlaydigan (3D hover) effektlarni yozish uchun toza CSS3 transformatsiyalaridan foydalaniladi.</div>
+                <div class="card-title">Interaktiv UI/UX va JavaScript Pro</div>
+                <div class="card-desc">Foydalanuvchilar elementlar ustiga sichqonchani olib kelganda qimirlaydigan (3D hover) effektlarni yozish uchun toza CSS3 transformatsiyalaridan foydalaniladi. Bu foydalanuvchiga interaktiv chuqurlik beradi. Quyida siz uchun mutlaqo yangi va hech kimda yo'q tayyor 3D matritsa kodi jonli renderlandi:</div>
             </div>
             """, unsafe_allow_html=True)
+            
+            st.code("""
+/* --- KGO GROUP SPECIAL 3D MATRIX HOVER CARD EFFECT --- */
+.kgo-matrix-card {
+    width: 350px;
+    height: 250px;
+    background: linear-gradient(145deg, #0f172a, #020617);
+    border-radius: 20px;
+    border: 1px solid rgba(0, 242, 254, 0.2);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.5s ease;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+}
+
+/* Sichqoncha kelganda 3D fazoda qimirlash va neon nur taratish mantiqi */
+.kgo-matrix-card:hover {
+    transform: translateY(-10px) rotateX(8deg) rotateY(-8deg) scale(1.02);
+    border-color: #ff0055;
+    box-shadow: 0 20px 40px rgba(255, 0, 85, 0.3);
+}
+
+.kgo-matrix-card .inner-element {
+    transform: translateZ(50px); /* 3D chuqurlik berish */
+    transition: transform 0.5s ease;
+}
+            """, language="css")
+
         with tab2:
-            st.markdown("### ⚙️ Asinxron Server Infratuzilmasi")
-            st.write("FastAPI yoki Node.js asinxron tartibda ishga tushiriladi.")
+            st.markdown("### ⚙️ Asinxron Server Infratuzilmasi & Ma'lumot Oqimi")
+            st.write("KGO Group me'yorlariga ko'ra, ma'lumotlar uzluksiz oqishi va server qotib qolmasligi uchun backend to'liq asinxron arxitekturada quriladi. Mana sizga mutlaqo yangi FastAPI va orqa fonda yuklamalarni hisoblovchi yuqori darajali server kodi:")
+            
+            st.code("""
+# --- KGO ASYNCHRONOUS HIGH-SPEED BACKEND ENGINE ---
+from fastapi import FastAPI, Depends, HTTPException, status
+from pydantic import BaseModel
+import asyncio
+import logging
+
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger("KGO_BACKEND")
+
+app = FastAPI(title="KGO Systems Core API", version="1.0.0")
+
+class DataPayload(BaseModel):
+    client_id: str
+    query_packet: str
+    security_hash: str
+
+@app.post("/api/v1/compute", status_code=status.HTTP_200_OK)
+async def process_matrix_data(payload: DataPayload):
+    logger.info(f"KGO Core Terminalidan so'rov keldi: {payload.client_id}")
+    
+    # Assta-sekin ma'lumotlarni qayta ishlash simulatsiyasi (Non-blocking)
+    await asyncio.sleep(0.5) 
+    
+    if not payload.security_hash.startswith("KGO_"):
+        raise HTTPException(status_code=403, detail="Kiber-Xavfsizlik ruxsat bermadi! Kalit xato.")
+        
+    return {
+        "status": "SUCCESS",
+        "engine_iq": "10k_Llama3_Lightning",
+        "processed_at": "2026-05-23",
+        "response_pack": "Data compiled successfully under KGO protection protocol."
+    }
+            """, language="python")
+
         with tab3:
-            st.markdown("### 🛡️ Kiber-Xavfsiz Kod Yozish")
-            st.write("SQL injection va XSS hujumlaridan himoyalanish choralari.")
+            st.markdown("### 🛡️ Kiber-Xavfsiz Kod Yozish va Hujumlardan Himoya")
+            st.write("Oddiy odamlarni firgarlardan va SQL injection hamda Cross-Site Scripting (XSS) kabi xakerlik hujumlaridan himoya qilish uchun yoziladigan global kiber-qalqon tizimi:")
+            
+            st.code("""
+// --- KGO CYBER SHIELD: INPUT VALIDATION & SANITIZATION ENGINE ---
+function sanitizeKgoInput(rawInput) {
+    // XSS hujumlarini oldini olish uchun zararli teglarni yo'q qilish
+    let cleanInput = rawInput.replace(/[^a-zA-Z0-9 ]/g, "");
+    
+    // SQL injection belgilarini tekshirish va bloklash
+    const sqlKeywords = ["SELECT", "DROP", "DELETE", "UPDATE", "INSERT", "OR 1=1", "--"];
+    for (let keyword of sqlKeywords) {
+        if (cleanInput.toUpperCase().includes(keyword)) {
+            console.warn("⚠️ KIBER HUJUM ANIQLANDI! Tizim bloklandi.");
+            return null;
+        }
+    }
+    return cleanInput;
+}
+            """, language="javascript")
 
     # --- 6-SAHIFA: ULKAN MA'LUMOTLAR BAZASI ---
     elif choice == "📊 Global Big Data Integratsiyasi":
@@ -335,12 +447,14 @@ if __name__ == '__main__':
         with col2: st.metric(label="AI Neyron Aloqalari tezligi", value="10,000 IQ", delta="Cosmic Lightning Engine")
         with col3: st.metric(label="Insoniyatga foydali modullar", value="12 ta Global Soha", delta="Ijtimoiy Foyda")
 
-    # 🔥 [YANGI ELEMENT] SAYT PASTIDAGI DOIMI TURADIGAN DUMALOQ TUGMANING HTML KODI
-    # Ushbu tugma sayt qanchalik pastga tushsa ham ekranda qoladi. Unga o'zingning maxsus havolangni ulab qo'yishing mumkin!
+    # 🔥 [YANGI ELEMENT] DUMALOQ TUGMA VA UNING TEPASIDA NEON "GEMINGPT IMAGE" YOZUG'I
     st.markdown("""
-    <a href="https://poe.com/chat/81qr77y547hblxp4yk" target="_blank" class="kgo-floating-btn" title="KGO Maxsus Rasm Yaratish Moduli">
-        ♾️
-    </a>
+    <div class="kgo-btn-container">
+        <div class="kgo-btn-text-label">gemingpt image</div>
+        <a href="https://poe.com/chat/81qr77y547hblxp4yk" target="_blank" class="kgo-floating-btn" title="KGO Maxsus Rasm Yaratish Moduli">
+            ♾️
+        </a>
+    </div>
     """, unsafe_allow_html=True)
 
-    st.markdown(f'<div style="text-align:center; color:gray; font-size:12px; margin-top: 50px;">© 2026 Kamron Xudaynazarov | KGO Group Global Systems</div>', unsafe_allow_html=True)
+    st.markdown(f'<div style="text-align:center; color:gray; font-size:12px; margin-top: 60px;">© 2026 Kamron Xudaynazarov | KGO Group Global Systems</div>', unsafe_allow_html=True)
