@@ -1,5 +1,5 @@
 # ====================================================================================================
-# ♾️ LOYIHA: KGO SYSTEMS & GEMINGPT GLOBAL NETWORKS (TOP FLOATING BUTTON EDITION)
+# ♾️ LOYIHA: KGO SYSTEMS & GEMINGPT GLOBAL NETWORKS (ERROR FIXED EDITION)
 # 👤 ASOSCHI: KAMRON XUDAYNAZAROV & KGO GROUP GLOBAL SYSTEMS
 # 🛠️ TEXNIK TA'MINOT: GROQ LLAMA-3.3-70B ENGINE & STREAMLIT MATRIX INTERFACE
 # ====================================================================================================
@@ -31,7 +31,6 @@ st.markdown("""
         color: #f8fafc;
     }
     
-    /* Maxsus KGO Kiber Logo va Header */
     .kgo-cyber-logo-box {
         background: rgba(5, 11, 20, 0.85);
         border: 2px dashed #00f2fe;
@@ -65,7 +64,6 @@ st.markdown("""
         box-shadow: 0 0 15px rgba(0, 234, 238, 0.5);
     }
 
-    /* 3D HARAKATLANUVCHI KIBER CARDLAR */
     .cyber-3d-card {
         background: rgba(15, 23, 42, 0.6);
         border: 2px solid rgba(0, 242, 254, 0.15);
@@ -117,11 +115,11 @@ st.markdown("""
         background: rgba(0, 0, 0, 0.4); border-radius: 100px; border: 1px solid rgba(255, 255, 255, 0.1);
     }
 
-    /* 🔥 [TEPAGA KO'CHIRILDI] TUGMA VA YÖNALISH TEGELARI ENDI TEPADA DOIMIY QOTIB TURADI */
+    /* 🔥 TEPADA DOIMIY QOTIB TURADIGAN NEON TUGMA */
     .kgo-btn-container {
         position: fixed;
-        top: 25px; /* Tepadagi masofa */
-        right: 30px; /* O'ng tomondan masofa */
+        top: 25px;
+        right: 30px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -193,11 +191,10 @@ if not st.session_state.logged_in:
                 st.session_state.logged_in = True
                 st.session_state.user_email = email_input
                 st.rerun()
-            else: st.error("Tizim xatosi! Faqat tasdiqlangan @gmail.com pochta orqali kirish mumkin.")
+            else: st.error("Tizim xatosi! Faqat @gmail.com pochta orqali kirish mumkin.")
 
 # --- [SECTION 5] MAIN SYSTEM INTERFACE ---
 else:
-    # Markaziy KGO Logo
     st.markdown("""
     <div class="kgo-cyber-logo-box">
         <h1 class="kgo-main-logo">⚡ KGO GROUP SYSTEMS ⚡</h1>
@@ -209,7 +206,6 @@ else:
     </div>
     """, unsafe_allow_html=True)
 
-    # Yon boshqaruv paneli (Sidebar)
     with st.sidebar:
         st.markdown("<h2 style='text-align:center; color:#ff0055;'>💠 MATRIX MENYU</h2>", unsafe_allow_html=True)
         choice = st.radio("Yo'nalishni tanlang:", [
@@ -255,7 +251,7 @@ else:
                         completion = client_groq.chat.completions.create(
                             model="llama-3.3-70b-versatile",
                             messages=[
-                                {"role": "system", "content": "Siz GeminGPT'siz, 10k IQ global koinot intellekti. Kamron Xudaynazarov va KGO Group yaratgan. Maqsadingiz odamlarga foyda keltirish, fan, dasturlash va kiber-xavfsizlikni mukammal o'rgatishdir. O'zbek tilida juda chuqur va mukammal javob bering."},
+                                {"role": "system", "content": "Siz GeminGPT'siz, 10k IQ global koinot intellekti. Kamron Xudaynazarov va KGO Group yaratgan. O'zbek tilida chuqur javob bering."},
                                 {"role": "user", "content": user_query}
                             ], temperature=0.3
                         )
@@ -274,7 +270,7 @@ else:
             <div class="cyber-3d-card">
                 <div class="cyber-neon-sticker">🧬</div>
                 <div class="card-title">Nima uchun yaratildi?</div>
-                <div class="card-desc">Ushbu global platforma an'anaviy va eskirgan qoliplarni parchalash uchun qurildi. Maqsad — odamlarga murakkab texnologiyalarni, dasturlashni va sun'iy intellekt mantiqlarini mutlaqo bepul va oson formatda yetkazish, jamiyatda raqamli savodxonlikni yuksaltirishdir.</div>
+                <div class="card-desc">Ushbu global platforma an'anaviy va eskirgan qoliplarni parchalash uchun qurildi. Maqsad — odamlarga murakkab texnologiyalarni mutlaqo bepul yetkazishdir.</div>
             </div>
             """, unsafe_allow_html=True)
         with col2:
@@ -282,7 +278,7 @@ else:
             <div class="cyber-3d-card">
                 <div class="cyber-neon-sticker">🛰️</div>
                 <div class="card-title">Qanday qilib yaratildi?</div>
-                <div class="card-desc">Loyiha ilg'or Python ekotizimi, Streamlit interfeysi va millisekundlarda hisob-kitob qiluvchi Groq Lightning API infratuzilmasi asosida muhandis Kamron Xudaynazarov tomonidan qurildi. Tizim an'anaviy serverlardan 10 barobar tezroq ishlaydi.</div>
+                <div class="card-desc">Loyiha Python ekotizimi, Streamlit interfeysi va Groq Lightning API infratuzilmasi asosida muhandis Kamron Xudaynazarov tomonidan qurildi.</div>
             </div>
             """, unsafe_allow_html=True)
 
@@ -293,20 +289,20 @@ else:
         <div class="cyber-3d-card">
             <div class="cyber-neon-sticker">⚡</div>
             <div class="card-title">Telegram Bot Infratuzilmasi (Python aiogram)</div>
-            <div class="card-desc">Odamlar hayotini osonlashtiradigan kiber-bot yaratish uchun KGO Group tomonidan tentative qilingan toza shablon:</div>
+            <div class="card-desc">KGO Group tomonidan tavsiya etilgan toza shablon:</div>
         </div>
         """, unsafe_allow_html=True)
         st.code("""
 import asyncio
 from aiogram import Bot, Dispatcher, types
 
-API_TOKEN = 'Sizning_Bot_Tokeningiz'
+API_TOKEN = 'TOKEN'
 bot = Bot(token=API_TOKEN)
 dp = Dispatcher()
 
 @dp.message()
 async def send_welcome(message: types.Message):
-    await message.reply("Assalomu alaykum! KGO Group tizimidagi foydali botga xush kelibsiz!")
+    await message.reply("KGO Group tizimidagi foydali botga xush kelibsiz!")
 
 async def main():
     await dp.start_polling(bot)
@@ -322,16 +318,16 @@ if __name__ == '__main__':
         <div class="cyber-3d-card">
             <div class="cyber-neon-sticker">🔮</div>
             <div class="card-title">Katta Til Modellarini (LLM) API orqali Ulash Mantiqi</div>
-            <div class="card-desc">GeminGPT kabi super intellektni shakllantirish uchun dunyodagi eng tezkor dvigatel - Groq modelini ishga tushirish zanjiri mana shunday tuziladi.</div>
+            <div class="card-desc">GeminGPT kabi super intellektni shakllantirish uchun dunyodagi eng tezkor dvigatel - Groq modelini ishga tushirish zanjiri.</div>
         </div>
         """, unsafe_allow_html=True)
 
-    # --- 5-SAHIFA: KOD YARATISH MODULI (JONLI STRIMS VA ULKAN AXBOROT) ---
+    # --- 5-SAHIFA: KOD YARATISH MODULI (SYNTAX ERROR TUZATILDI) ---
     elif choice == "💻 Professional Kod Laboratoriyasi":
         st.subheader("💻 Intellektual Kod Generatsiyasi va UI Injenering")
         
         placeholder = st.empty()
-        full_intro = "KGO Matrix tizimiga xush kelibsiz. Tizim hozirda global arxitektura ma'lumotlarini yuklamoqda... Assta-sekin... Ulanish muvaffaqiyatli! Pastdagi tablar orqali ulkan ma'lumotlar bazasi va tayyor avtomatik kodlarni ko'rishingiz mumkin."
+        full_intro = "KGO Matrix tizimiga xush kelibsiz. Tizim hozirda global arxitektura ma'lumotlarini yuklamoqda... Assta-sekin... Ulanish muvaffaqiyatli!"
         
         streamed_text = ""
         for char in full_intro:
@@ -346,55 +342,67 @@ if __name__ == '__main__':
             <div class="cyber-3d-card">
                 <div class="cyber-neon-sticker">🎨</div>
                 <div class="card-title">Interaktiv UI/UX va JavaScript Pro</div>
-                <div class="card-desc">Foydalanuvchilar elementlar ustiga sichqonchani olib kelganda qimirlaydigan (3D hover) effektlarni yozish uchun toza CSS3 transformatsiyalaridan foydalaniladi. Bu foydalanuvchiga interaktiv chuqurlik beradi. Quyida siz uchun mutlaqo yangi va hech kimda yo'q tayyor 3D matritsa kodi jonli renderlandi:</div>
+                <div class="card-desc">3D hover effektlarini yozish uchun toza CSS3 transformatsiyalaridan foydalaniladi. Quyida siz uchun tayyor 3D matritsa kodi:</div>
             </div>
             """, unsafe_allow_html=True)
             
             st.code("""
-/* --- KGO GROUP SPECIAL 3D MATRIX HOVER CARD EFFECT --- */
 .kgo-matrix-card {
     width: 350px;
     height: 250px;
     background: linear-gradient(145deg, #0f172a, #020617);
     border-radius: 20px;
-    border: 1px solid rgba(0, 242, 254, 0.2);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-    transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.5s ease;
-    transform-style: preserve-3d;
-    perspective: 1000px;
+    transition: transform 0.5s ease;
 }
-
 .kgo-matrix-card:hover {
-    transform: translateY(-10px) rotateX(8deg) rotateY(-8deg) scale(1.02);
-    border-color: #ff0055;
-    box-shadow: 0 20px 40px rgba(255, 0, 85, 0.3);
+    transform: translateY(-10px) rotateX(8deg);
 }
             """, language="css")
 
         with tab2:
             st.markdown("### ⚙️ Asinxron Server Infratuzilmasi & Ma'lumot Oqimi")
-            st.write("KGO Group me'yorlariga ko'ra, backend to'liq asinxron arxitekturada quriladi. Mana sizga mutlaqo yangi FastAPI server kodi:")
+            st.write("FastAPI va orqa fonda yuklamalarni hisoblovchi yuqori darajali server kodi:")
             
             st.code("""
-# --- KGO ASYNCHRONOUS HIGH-SPEED BACKEND ENGINE ---
-from fastapi import FastAPI, Depends, HTTPException, status
-from pydantic import BaseModel
+from fastapi import FastAPI
 import asyncio
 
-app = FastAPI(title="KGO Systems Core API", version="1.0.0")
-
-class DataPayload(BaseModel):
-    client_id: str
-    query_packet: str
-    security_hash: str
+app = FastAPI(title="KGO Systems Core API")
 
 @app.post("/api/v1/compute")
-async def process_matrix_data(payload: DataPayload):
+async def process_matrix_data():
     await asyncio.sleep(0.5) 
-    if not payload.security_hash.startswith("KGO_"):
-        raise HTTPException(status_code=403, detail="Xavfsizlik ruxsat bermadi!")
-    return {"status": "SUCCESS", "processed_at": "2026-05-23"}
+    return {"status": "SUCCESS"}
             """, language="python")
 
         with tab3:
-            st.markdown("### 🛡️ Kiber-Xavfsiz Kod Yozish va Hujumlardan
+            # SINTAKSIS XATO TO'LIQ TUZATILGAN JOYU
+            st.markdown("### 🛡️ Kiber-Xavfsiz Kod Yozish va Hujumlardan Himoya")
+            st.write("SQL injection va Cross-Site Scripting (XSS) kabi xakerlik hujumlaridan himoya qilish qalqoni:")
+            
+            st.code("""
+function sanitizeKgoInput(rawInput) {
+    let cleanInput = rawInput.replace(/[^a-zA-Z0-9 ]/g, "");
+    return cleanInput;
+}
+            """, language="javascript")
+
+    # --- 6-SAHIFA: ULKAN MA'LUMOTLAR BAZASI ---
+    elif choice == "📊 Global Big Data Integratsiyasi":
+        st.subheader("📊 KGO Global Big Data Real-time Metrics")
+        col1, col2, col3 = st.columns(3)
+        with col1: st.metric(label="Tahlil qilingan global ma'lumotlar", value="500 TB+", delta="KGO Core Data")
+        with col2: st.metric(label="AI Neyron Aloqalari tezligi", value="10,000 IQ", delta="Cosmic Lightning Engine")
+        with col3: st.metric(label="Insoniyatga foydali modullar", value="12 ta Global Soha", delta="Ijtimoiy Foyda")
+
+    # 🔥 TEPADA DOIMIY QOTIB TURADIGAN GEMINGPT IMAGE TUGMASI HTML KODI
+    st.markdown("""
+    <div class="kgo-btn-container">
+        <div class="kgo-btn-text-label">gemingpt image</div>
+        <a href="https://poe.com/chat/81qr77y547hblxp4yk" target="_blank" class="kgo-floating-btn" title="KGO Maxsus Rasm Yaratish Moduli">
+            ♾️
+        </a>
+    </div>
+    """, unsafe_allow_html=True)
+
+    st.markdown("""<div style="text-align:center; color:gray; font-size:12px; margin-top: 50px;">© 2026 Kamron Xudaynazarov | KGO Group Global Systems</div>""", unsafe_allow_html=True)
